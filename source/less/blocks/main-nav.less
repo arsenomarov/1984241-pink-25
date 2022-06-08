@@ -3,7 +3,6 @@
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1;
   background-color: @color-dark;
 
   @media (min-width: @desktop-width) {
@@ -11,6 +10,12 @@
     position: relative;
     width: 620px;
     background-color: transparent;
+  }
+
+  @media (max-width: @desktop-width) {
+    .main-nav--closed .main-nav__item {
+      display: none;
+    }
   }
 }
 
@@ -97,18 +102,5 @@
 @media (max-width: @desktop-width) {
   .main-nav--closed .main-nav__item {
     display: none;
-  }
-
-  .main-nav--nojs .main-header__toggle {
-    display: none;
-  }
-
-  .main-nav--nojs .main-nav__list {
-    position: static;
-    min-height: 0;
-  }
-
-  .main-nav--nojs .main-nav__item {
-    display: block;
   }
 }

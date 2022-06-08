@@ -125,11 +125,16 @@
   width: 50px;
   padding: 0;
   height: 24px;
+  padding-right: 10px;
   border: none;
   outline: none;
   background-color: transparent;
   cursor: pointer;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    height: 27px;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
@@ -445,5 +450,24 @@
     position: relative;
     width: 747px;
     padding-top: 17px;
+  }
+}
+
+@media (max-width: @desktop-width) {
+  .main-header--nojs .main-header__top {
+    background-color: @color-dark;
+  }
+
+  .main-header--nojs .main-header__toggle {
+    display: none;
+  }
+
+  .main-header--nojs .main-nav__list {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-header--nojs .main-nav__item {
+    display: block;
   }
 }
